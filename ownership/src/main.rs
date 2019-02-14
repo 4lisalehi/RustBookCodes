@@ -48,9 +48,4 @@ fn main() {
     let mut some_string = String::from("some string here");
     let p1 = &mut some_string;
     let p2 = &mut some_string;
-
-
-
-
-
 }// Here, at the end of the scope, s3 calls drop, s1 & s2 have already been invalidated
