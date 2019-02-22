@@ -33,4 +33,21 @@ pub fn explore() {
     for (key, value) in &all_scores {
         println!("{}: {}", key, value);
     }
+
+    let mut new_scores = HashMap::new();
+    new_scores.insert(String::from("Blue team"), 10);
+
+    new_scores.entry(String::from("Blue team")).or_insert(15);
+    new_scores.entry(String::from("Red team")).or_insert(20);
+
+    println!("{:?}", new_scores);
+
+    let text = "Hello world wonderful world";
+    let mut text_map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = text_map.entry(word).or_insert(0);
+        *count += 1;
+    }
+
 }
