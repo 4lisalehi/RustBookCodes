@@ -1,4 +1,8 @@
 mod vectors;
+mod strings;
+mod hash_maps;
+
+use crate::hash_maps::hash_maps::explore;
 
 fn main() {
     // In real world scenarios, Rust will infer the type from the elements inserted into the vector,
@@ -21,4 +25,6 @@ fn main() {
         Some(third) => println!("The third element is: {}", third),
         None => println!("There is no third element"),
     }
+
+    explore();
 }
