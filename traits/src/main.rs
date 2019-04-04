@@ -24,6 +24,10 @@ pub struct Tweet {
 impl Summary for Tweet {}
 
 
+pub fn notify(item: impl Summary) {
+    println!("Breaking news: {}", item.summarize());
+}
+
 fn main() {
     let tweet = Tweet {
         username: String::from("alisalehi"),
